@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.background {
+    background-image: url('https://loveandspecs.com/wp-content/uploads/2015/03/valentines-day-desktop-background-kisses.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first {
+    background-color: #F9C7C1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 20px 40px;
+    font-weight: bold;
+}
+
+.first.hidden {
+    display: none;
+}
+
+#yes-button {
+    all: unset;
+    background-color: white;
+    padding: 10px 20px;
+    color: #F9C7C1;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Style the question container */
+.questions {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Hide all questions by default */
+.questions > div {
+    display: none;
+}
+
+.final {
+    display: none;
+}
+
+.title {
+    display: none;
+    background-color: #F9C7C1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    font-size: 8px;
+}
+
+.questions {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.you-win {
+    display: none;
+    background-color: #F9C7C1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    padding: 5px 0;
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.you-win.active {
+    display: flex;
+}
+
+.final.active {
+    display: block;
+    width: 450px;
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.questions.active {
+    display: block;
+}
+
+.title.active {
+    display: flex;
+}
+
+/* Show only the active question */
+.questions > div.active {
+    display: block;
+}
+
+/* Style the input field */
+input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Change border color when input is focused */
+input:focus {
+    border-color: #007bff;
+}
+
+/* Smooth transition effect */
+.questions > div {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
